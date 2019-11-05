@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void rellenos(int x,float **m);
+void relleno(int x,float **m);
 
 void imprime_cabezas(int x,float **m);
 
@@ -25,9 +25,9 @@ int main(){
             matriz[i] = new float[x+2];
         }
 
-relleno(x,matriz);
+    relleno(x,matriz);
 
-imprimecabezass(x,matriz);
+    imprime_cabezas(x,matriz);
 
 
     }
@@ -38,8 +38,7 @@ imprimecabezass(x,matriz);
 
 
 
-return 
-0;
+return 0;
 
 }
 
@@ -55,15 +54,14 @@ void relleno(int x,float **m){
 
 }
 
-void imprimecabezas(x, **m){
+void imprime_cabezas(int x, float**m){
 
     float sum=0;
-
-    for (i =0; i <x;i++) {
+     for (int i =0; i <x ;i++) {
 
         cout<<m[i][0]<<" "; 
         sum+=m[i][0];
-
+     }
 
 }
 
@@ -71,9 +69,9 @@ void imprimecabezas(x, **m){
 
 void imprime(int x,float **m){
 
-    for ( j < x+2 ;j++) {
+    for ( int j; j < x+2 ;j++) {
 
-        for ( i <x;i++) {
+        for ( int i; i <x;i++) {
 
             cout<<" "<<m[i][j]<<" ";
 
