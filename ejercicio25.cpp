@@ -1,37 +1,87 @@
 #include <iostream>
 
-void cambia_pasa_valor(int a);
-void cambia_pasa_direccion(int *a);
-void cambia_pasa_referencia(int &a);
+#include<iostream>
 
+using namespace std;
+
+void rellenos(int x,float **m);
+
+void imprime_cabezas(int x,float **m);
+
+void imprime(int x,float **m);
 
 int main(){
-  int x;
 
-  x = 0; cambia_pasa_valor(x);
-  std::cout << "por valor" << x << std::endl;
+    cout<<"Escriba un numero del 3 al 11"<<endl;
 
-  x = 0; cambia_pasa_direccion(&x);
-  std::cout << "por direccion" << x << std::endl;
+    int x=0;
 
-  x = 0; cambia_pasa_referencia(x);
-  std::cout << "por referencia" << x << std::endl;
+    cin>>x;
+
+    if(x>=3 && x<=11){
+
+        float ** matriz = new float *[x];
+        for (int i =0; i < x; ++i){
+            matriz[i] = new float[x+2];
+        }
+
+relleno(x,matriz);
+
+imprimecabezass(x,matriz);
+
+
+    }
+
+    else{
+        cout<<"El numero no esta en el rango valido"<<endl;
+    }
 
 
 
-  return 0;
+return 
+0;
+
 }
 
 
-void cambia_pasa_valor(int a){
-  a = 100;
+
+void relleno(int x,float **m){
+    for (int i = 0; i < x; i++){
+        for (int j = 0; j < x+2 ; j++){
+            m[i][j] = i+j;
+            cout<< m[i][j] <<endl;
+        }
+    }
+
 }
 
-void cambia_pasa_direccion(int *a){
-  *a = 100;
+void imprimecabezas(x, **m){
+
+    float sum=0;
+
+    for (i =0; i <x;i++) {
+
+        cout<<m[i][0]<<" "; 
+        sum+=m[i][0];
+
+
 }
 
-void cambia_pasa_referencia(int &a){
-  a = 100;
+
+
+void imprime(int x,float **m){
+
+    for ( j < x+2 ;j++) {
+
+        for ( i <x;i++) {
+
+            cout<<" "<<m[i][j]<<" ";
+
+    }
+
+    cout<<endl;
+
+    }
+
 }
 
