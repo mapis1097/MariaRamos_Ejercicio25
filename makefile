@@ -1,3 +1,7 @@
-funciones.x : ejercicio25.cpp
-	c++ ejercicio25.cpp -o funciones.x
+funciones.dat : funciones.x
+	./funciones.x
+	./funciones.x > funciones.dat
+funciones.x : clase25.cpp
+	c++ clase25.cpp -o funciones.x
+
 	
